@@ -46,6 +46,8 @@ def GenerateResponse(input_text):
     "output: Thankyou !!You may proceed to checkout...",
     "input: No",
     "output: Keep going!!",
+    "input: 7 UP",
+    "output:  "Refreshing lemon-lime flavored soda.",price: 40,  ₹discount: 10% ,new_price: 36,",
     f"input: {input_text}",
     "output: ",
     ])
