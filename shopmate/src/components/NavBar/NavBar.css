@@ -54,7 +54,12 @@
     margin-left: 30px;
   }
   
-  .navbar-menu li{
+  .navbar-menu a{
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+  .navbar-menu li {
     display: block;
     
   }
