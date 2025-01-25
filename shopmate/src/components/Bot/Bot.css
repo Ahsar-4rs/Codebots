@@ -1,3 +1,16 @@
 .bot{
-    position: absolute;
+    position:sticky;
+    bottom: 2px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    background-color: #dcedfd;
+    
+    border: solid 1px rgb(87, 86, 86);
+}
+
+.bot img{
+    width: 50px;
+    height: 50px;
+    
 }

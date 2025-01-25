@@ -1,9 +1,11 @@
 import React from 'react'
 import bot from '../Bot/bot.png'
+import './Bot.css'
+import { Link } from 'react-router-dom'
 function Bot() {
   return (
     <div className='bot'>
-        <img src={bot}/>
+        <Link to={`/chatbot`}><img src={bot} /></Link>
     </div>
   )
 }
