@@ -9,7 +9,7 @@ import ShopCategory from './pages/Inventory/ShopCategory'
 import StoreContextProvider from './context/StoreContext.js';
 import Bot from './components/Bot/Bot.js';
 import ChatbotEmbed from './components/Chatbot/chatbot.js';
-
+import Product from './components/Product/Product.js';
 function App() {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ function App() {
            <Route path='/stationaries' element={<ShopCategory  category='Stationeries'/>}/>
            <Route path='/clothes' element={<ShopCategory  category='Clothes'/>}/>
            <Route path='/chatbot' element={<ChatbotEmbed/>}/>
+           <Route path='/product/:productId' element={<Product/>} />
         </Routes>
       
         

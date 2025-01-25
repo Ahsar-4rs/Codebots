@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import ProductDescription from '../ProductDescription/ProductDescription'
-import Gallery from '../Gallery/Gallery';
+import Gallery from '../Gallery/Gallery.js';
 import './Product.css'
 import { StoreContext } from '../../context/StoreContext';
 import { useParams } from 'react-router-dom';
