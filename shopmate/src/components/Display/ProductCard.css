@@ -1,0 +1,130 @@
+.product{
+    height: 100%;
+    padding-bottom: 50px;
+    
+  
+   cursor: pointer;
+}
+.car{
+  padding:10px;
+}
+
+.card{
+  box-shadow: 4px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+ .card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 160px;
+    text-align: center;
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+   
+}
+.card-product .bottom-wrap {
+    padding: 15px;
+    
+}
+
+.label-rating { margin-right:10px;
+    color: #3D4052;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart-btn{
+    height: 30px;
+    background-color: #f5a021;
+    cursor: pointer;
+    padding: 5px;
+    color: #000000;
+    text-transform: uppercase;
+    
+    
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    }
+
+.cart-btn:hover{
+    opacity: 0.8;
+}
+
+
+
+.img-loaded{
+   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+   position: relative;
+   opacity: 0;
+   animation-fill-mode: forwards;
+   animation-duration: 0.7s;
+   animation-delay: 0.1s;
+}
+.price-old p{
+    mix-blend-mode: multiply;
+    color: grey;
+    margin-left: 40%;
+}
+.price-new p{
+    font-size: 15px;
+}
+.product-rating{
+    margin-top: 20px;
+    color: rgb(254, 148, 0);
+    font-size: 15px;
+}
+
+.col-md-4 car{
+    background-color: #000000;
+}
+
+@media (max-width:1280px) {
+    .product{
+        width: 220px;
+        font-size: 14px;
+    }
+    .product img{
+        width: 220px;
+    }
+}
+@media (max-width:1024px) {
+    .product{
+        width: 170px;
+        font-size: 13px;
+    }
+    .product img{
+        width: 170px;
+    }
+    
+}
+@media (max-width:800px) {
+    .product{
+        width: 120px;
+        font-size: 12px;
+    }
+    .product img{
+        width: 120px;
+    }
+    
+}
+
+@media (max-width:500px) {
+    .product{
+        width: 160px;
+        
+    }
+    .product img{
+        width: 160px;
+    }
+    
+}

@@ -1,0 +1,28 @@
+.filter{
+    background-color: rgb(204, 204, 204);
+    width: 100%;
+}
+
+.category{
+    margin:auto;
+    
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-items: center;
+    width: 100%;
+}
+.category li{
+    margin: 3px 8px;
+    text-align: center;
+    display: block;
+    width: 110px;
+    padding:5px 0px;
+}
+
+.category li:hover{
+    background-color: rgb(79, 79, 79);
+    color: white;
+}
