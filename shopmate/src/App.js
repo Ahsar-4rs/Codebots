@@ -7,6 +7,7 @@ import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import ShopCategory from './pages/Inventory/ShopCategory'
 import StoreContextProvider from './context/StoreContext.js';
+import Bot from './components/Bot/Bot.js';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
            <Route path='/clothes' element={<ShopCategory  category='Clothes'/>}/>
         </Routes>
       
-      
+        <Bot/>
       <Footer />
       </BrowserRouter>
       </StoreContextProvider>
