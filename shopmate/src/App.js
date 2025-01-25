@@ -6,12 +6,14 @@ import {BrowserRouter, Route,Routes} from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import ShopCategory from './pages/Inventory/ShopCategory'
+import StoreContextProvider from './context/StoreContext.js';
 
 function App() {
   return (
     <div className="App">
+      <StoreContextProvider>
       <BrowserRouter>
-      <div className='app'>
+      
       
       <NavBar/>
         <Routes>
@@ -28,9 +30,10 @@ function App() {
            <Route path='/clothes' element={<ShopCategory  category='Clothes'/>}/>
         </Routes>
       
-      </div>
+      
       <Footer />
       </BrowserRouter>
+      </StoreContextProvider>
     </div>
   );
 }

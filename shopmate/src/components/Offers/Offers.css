@@ -1,0 +1,12 @@
+.offers h1{
+    color: #000000;
+    font-weight: 500;
+    font-family: Lobster;
+    font-size: 30pt;
+}
+
+.offer-items{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+
+}
