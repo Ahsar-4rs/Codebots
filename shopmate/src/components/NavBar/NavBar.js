@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import './NavBar.css'
 import { assets } from '../../assets/assets'
 import {Link} from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext'
 
 const getDefaultMenu=()=>{
   let menu="Home"
@@ -12,7 +13,7 @@ const NavBar = (props) => {
     const savedMenu = localStorage.getItem("menu");
     return savedMenu ? JSON.parse(savedMenu) : getDefaultMenu();
 });
-
+  const{getTotalCartItems}=useContext(StoreContext)
 
 
   return (
@@ -29,8 +30,10 @@ const NavBar = (props) => {
            
         </div>
         <div className='navbar-right'>
+          <div className='cart'>
+        <div className='cart-count'>{getTotalCartItems()}</div>
         <a href='/cart'><img src={assets.cart_icon} alt='Add To Cart' className='navbar-cart-icon'/></a>
-        
+        </div>
           </div>
         
     </div>
