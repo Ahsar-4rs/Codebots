@@ -1,5 +1,18 @@
 .home{
     width: 90%;
-   
     margin: auto;
+    
 }
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.explore{
+    margin: 5px;
+    width: 55%;
+}
+
+
+

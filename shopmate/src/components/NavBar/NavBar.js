@@ -30,7 +30,7 @@ const NavBar = (props) => {
         </div>
         <div className='navbar-right'>
         <a href='/cart'><img src={assets.cart_icon} alt='Add To Cart' className='navbar-cart-icon'/></a>
-             <button>Sign In</button>
+        
           </div>
         
     </div>

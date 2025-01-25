@@ -1,0 +1,194 @@
+.login-body{
+    width: 100%;
+    background-size: cover;
+    height: 490px;
+    
+}
+
+.outbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.admin-user{
+    
+    margin-top: 40px;
+    display: inline-flex;
+    list-style: none;
+    border: grey;
+}
+
+#admin{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+}
+#user{
+    background-color: #5D0202;
+    color: white;
+    padding: 10px 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+}
+
+.admin-user li{
+    width: 100px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wrapper .form-box{
+    
+    transition: height .5s ease;
+    width: 360px;
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: black;
+    padding:15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper .form-boxactive{
+    
+    transition: height .5s ease;
+    width: 360px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: black;
+    padding:15px;
+    
+}
+
+
+
+
+.form-box .register{
+    position: absolute;
+   visibility: hidden;
+   
+}
+.wrapper .form-boxactive .register{
+    transition: transform .5s ease;
+    transform: translateY(-210px);
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.wrapper .form-boxactive .login{
+  opacity: 0;
+}
+.form-box .login{
+    width: 80%;
+    transition: opacity 1s ease;
+    opacity: 1;
+    margin: auto;
+}
+
+.wrapper h1{
+    font-size: 20pt;
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    margin: auto;
+}
+
+.form .input-box{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin:17px auto;
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+   border: none;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 40px;
+}
+
+.form button{
+    width: 100%;
+    background-color: #5D0202;
+    color: white;
+    padding: 7px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.form .terms {
+    color: white;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+.form .terms label{
+    padding: 5px;
+}
+
+.form .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 5px 0 7px;
+    color: white;
+}
+
+.register-link p a{
+    color: #3c2ce5;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+ @media (max-width:750px){
+    .wrapper .form-box{
+    
+        
+        width: 300px;
+        height: 320px;
+        
+        
+    }
+    
+    .wrapper .form-boxactive{
+        
+        transition: height .5s ease;
+        width: 300px;
+        height: 420px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        color: black;
+        
+    }
+}
