@@ -1,14 +1,10 @@
 import React,{useContext} from 'react'
 import './ShopCategory.css'
-import { StoreContext } from '../../context/StoreContext'
-import DropdownList from '../../components/DropDownList/dropDownList';
 import { assets } from '../../assets/assets';
-import ProductCard from '../../components/Display/ProductCard';
+import DropdownList from '../DropDownList/dropDownList.js'
 import { Link } from 'react-router-dom';
 
 const ShopCategory = (props) => {
-    const{all_product}=useContext(StoreContext);
-    
     
   return (
     <div className='shop-category'>
@@ -18,7 +14,7 @@ const ShopCategory = (props) => {
       <h1>Shop Here</h1>
       <div className='shopcategory-indexSort'>
         <p>
-            <span>Showing 30 products</span> out of {all_product.length} products
+            <span>Showing 30 products</span> out of 89 products
         </p>
         <br/>
         <div className='shopcategory-sort'>

@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar.js'
 import {BrowserRouter, Route,Routes} from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
+import ShopCategory from './pages/Inventory/ShopCategory'
 
 function App() {
   return (
@@ -16,6 +17,15 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/cart' element={<Cart/>} />
+
+          <Route path='/kitchen' element={<ShopCategory category='Kitchen'/>}/>
+           <Route path='/groceries' element={<ShopCategory category='Groceries'/>}/>
+           <Route path='/cosmetics' element={<ShopCategory category='Cosmetics'/>}/>
+           <Route path='/beverages' element={<ShopCategory category='Beverages'/>}/>
+           <Route path='/snacks' element={<ShopCategory  category='Snacks'/>}/>
+           <Route path='/household' element={<ShopCategory category='Household items'/>}/>
+           <Route path='/stationaries' element={<ShopCategory  category='Stationeries'/>}/>
+           <Route path='/clothes' element={<ShopCategory  category='Clothes'/>}/>
         </Routes>
       
       </div>
