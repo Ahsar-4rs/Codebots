@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import './ShopCategory.css'
 import { StoreContext } from '../../context/StoreContext'
 import DropdownList from '../../components/DropDownList/dropDownList.js'
-import { assets } from '../../assets/assets';
+import { all_products, assets } from '../../assets/assets';
 import ProductCard from '../../components/Display/ProductCard';
 import { Link } from 'react-router-dom';
 

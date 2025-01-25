@@ -4,9 +4,10 @@ import { StoreContext } from '../../context/StoreContext'
 import { assets } from '../../assets/assets'
 import utils from '../../utils'
 import { Link } from 'react-router-dom'
+import QRCode from 'react-qr-code'
 const CartItems = () => {
   const {total,checkout,getTotalCartAmount,all_product,cartItems,removeFromCart}=useContext(StoreContext);
-
+  const cartItemsForQRCode = JSON.stringify(cartItems);
     return (
     <div className='cartitems'>
       <div className='cartitems-format-main'>
@@ -51,7 +52,12 @@ const CartItems = () => {
                     <h3>{utils.formatCurrency(getTotalCartAmount())}</h3>
                 </div>
             </div>
-            
+            <QRCode 
+            size={200}
+            bgColor='white'
+            fgColor='black'
+            value={cartItemsForQRCode}
+            />
             <a href='/cart'><button onClick={()=>{checkout()}} >PROCEED TO CHECKOUT</button></a>
         </div>
         
