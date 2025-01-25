@@ -48,6 +48,8 @@ def GenerateResponse(input_text):
      "input: prices",
     "output: I'm sorry, I don't have a way to list the prices of all items at once. However, if you select a category, I can show you the products and their prices in that category."
     "output: Keep going!!",
+    "input: 7 UP",
+    "output:  "Refreshing lemon-lime flavored soda.",price: 40,  ₹discount: 10% ,new_price: 36,",
     f"input: {input_text}",
     "output: ",
 
