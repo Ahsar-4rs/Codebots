@@ -5,9 +5,16 @@ import { assets } from '../../assets/assets'
 import utils from '../../utils'
 import { Link } from 'react-router-dom'
 import QRCode from 'react-qr-code'
+import CsvDownloadButton from 'react-json-to-csv'
+
+const jsonToCsv = (json) => {
+  const csvRows = Object.entries(json).map(([key, value]) => `${key}:${value}`);
+    return csvRows.join(',');
+}
+
 const CartItems = () => {
   const {total,checkout,getTotalCartAmount,all_product,cartItems,removeFromCart}=useContext(StoreContext);
-  const cartItemsForQRCode = JSON.stringify(cartItems);
+    const csvData = jsonToCsv(cartItems);
     return (
     <div className='cartitems'>
       <div className='cartitems-format-main'>
@@ -20,6 +27,7 @@ const CartItems = () => {
       </div>
       <hr/>
       {all_product.map((item)=>{
+        console.log(cartItems)
         if(cartItems[item.id]>0)
         {
             return( <div>
@@ -35,6 +43,7 @@ const CartItems = () => {
                         <hr/>
                     </div>)
         }
+        
         return null;
       })}
 
@@ -56,7 +65,7 @@ const CartItems = () => {
             size={200}
             bgColor='white'
             fgColor='black'
-            value={cartItemsForQRCode}
+            value={csvData}
             />
             <a href='/cart'><button onClick={()=>{checkout()}} >PROCEED TO CHECKOUT</button></a>
         </div>

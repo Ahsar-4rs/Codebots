@@ -1,12 +1,12 @@
 import streamlit as st
 import random
 import time
-import ShopmateBackend
+import ShopmateBend
 
 
 # Streamed response emulator
 def response_generator(prompt):
-    response = ShopmateBackend.GenerateResponse(prompt)
+    response = ShopmateBend.GenerateResponse(prompt)
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
