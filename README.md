@@ -214,13 +214,13 @@ https://ibb.co/QCScj6V
 ![Workflow]( https://drive.google.com/file/d/1GTZNRvWD1pzo7hOyx5J8Mq4dqn5TctJb/view?usp=drive_link)
 * *
 
-caption explaining the schematic*
+*Customer will access the website and go to either chatbot to know about items or manually browse through the inventory where the items will be added to the cart. In the cart, a QR Code will be made to access the items after hardware sensoring and processing*
 
 # Build Photos
 ![Team]( https://drive.google.com/file/d/1khxWf5Y_UMg_Fcj8ZP4SCONEbsy5SUrt/view?usp=drive_link)
 
 
-![Components]( https://drive.google.com/file/d/1khxWf5Y_UMg_Fcj8ZP4SCONEbsy5SUrt/view?usp=drive_link)
+![Components]( https://drive.google.com/file/d/1mk1RquxG3y15vELfg2b_otQBWx2yZAGJ/view?usp=drive_link)
 *bot
 cartItems
 Product
@@ -235,12 +235,10 @@ LoginRegister*
 
 
 ![Final](Add photo of final product here)
-*https://drive.google.com/file/d/1CJxSu4W6EOvnwJ3z_7Tl5f8tsCqIvDAQ/view?usp=drive_link
-
+https://drive.google.com/file/d/1CJxSu4W6EOvnwJ3z_7Tl5f8tsCqIvDAQ/view?usp=drive_link
 ### Project Demo
 # Video
-[Add your demo video link here]
-https://drive.google.com/file/d/1Q0jqlNJJrwMwJcHtcnZCwYEc1WCTNSOu/view?usp=drive_link
+https://drive.google.com/file/d/1QE0M8hQF7OjT7H0NJyWAUXmVHeB1WrzG/view?usp=drive_link
 # Additional Demos
 [Add any extra demo materials/links]
 
