@@ -116,7 +116,7 @@ https://ibb.co/QCScj6V
 *This pic shows the cart page where all items added as well and total price is listed. Additionaly it generates the QR Code that has to be scanned for obtaining the items from a container like vending machine by analysing the csv sheet obtained *
 
 # Diagrams
-![Workflow]( https://drive.google.com/file/d/1GTZNRvWD1pzo7hOyx5J8Mq4dqn5TctJb/view?usp=drive_link)
+( https://drive.google.com/file/d/1GTZNRvWD1pzo7hOyx5J8Mq4dqn5TctJb/view?usp=drive_link)
 * *
 
 *Customer will access the website and go to either chatbot to know about items or manually browse through the inventory where the items will be added to the cart. In the cart, a QR Code will be made to access the items after hardware sensoring and processing*
