@@ -39,30 +39,31 @@ items = ["Kitchen", "Clothes", "Cosmetics", "Groceries", "Snacks", "Beverages", 
 selected_item = st.sidebar.selectbox("Choose a category", items)
 
 st.sidebar.title("Product List")
-
+cart={}
 user_id = "user.dbms@gmail.com"  # Replace with the actual user ID
-user = users_collection.find_one({"_id": user_id})
-
+user = users_collection.find_one({"email": user_id})
+quantity=0
 # Display products from MongoDB
 for product in results:
     if (product['category'].lower()==selected_item.lower()):
         st.sidebar.write(f"**{product['name']}** - ₹{product['price']}")
         # Quantity input
         quantity = st.sidebar.number_input(f"Quantity:  ", min_value=0, max_value=100, value=0, key=product['_id'])
-        #if quantity>0:
-         #   add_to_cart(product['name'], quantity)
+        add_to_cart(product['name'],quantity)
     if user:
         # Check if the product already exists in the cart
         cart_data = user.get("cartData", {})
-        if product['_id'] in cart_data:
+        product_id_str = str(product['id'])  # Convert ObjectId to string
+        if product_id_str in cart_data:
             # Update the quantity
-            cart_data[product['_id']] += quantity
+            cart_data[product_id_str] += quantity
         else:
             # Add the product to the cart
-            cart_data[product['_id']] = quantity
+            cart_data[product_id_str] = quantity
 
         # Update the user's cart in the database
-        users_collection.update_one({"_id": user_id}, {"$set": {"cartData": cart_data}})
+        users_collection.update_one({"email": user_id}, {"$set": {"cartData": cart_data}})
+        
 
 
 # Based on the category selected, show the respective item options
@@ -113,11 +114,10 @@ elif selected_item == "Households":
 st.sidebar.header("Shopping Cart")
 if st.session_state.cart:
     for cart_item in st.session_state.cart:
-        st.sidebar.write(f"{cart_item['quantity']} x {cart_item['item']}")
+        if cart_item['quantity']>0:
+            st.sidebar.write(f"{cart_item['quantity']} x {cart_item['item']}")
 else:
     st.sidebar.write("Your cart is empty.")
-    
-
 # Close the connection
 client.close()
 
