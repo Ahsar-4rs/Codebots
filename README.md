@@ -245,9 +245,9 @@ https://drive.google.com/file/d/1Q0jqlNJJrwMwJcHtcnZCwYEc1WCTNSOu/view?usp=drive
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- K Pavitra: ChatBot
+- Khadeeja Nusrath: Chatbot
+- Rasha Ameena: React App
 
 ---
 Made with ❤️ at TinkerHub
