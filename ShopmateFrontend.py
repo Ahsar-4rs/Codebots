@@ -56,7 +56,7 @@ for product in results:
         product_id_str = str(product['id'])  # Convert ObjectId to string
         if product_id_str in cart_data:
             # Update the quantity
-            cart_data[product_id_str] += quantity
+            cart_data[product_id_str] += int(quantity)
         else:
             # Add the product to the cart
             cart_data[product_id_str] = quantity
