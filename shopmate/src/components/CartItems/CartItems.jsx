@@ -27,7 +27,7 @@ const CartItems = () => {
       </div>
       <hr/>
       {all_product.map((item)=>{
-        console.log(cartItems)
+        
         if(cartItems[item.id]>0)
         {
             return( <div>

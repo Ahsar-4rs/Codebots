@@ -12,6 +12,13 @@ import streamlit as st
 client = MongoClient('mongodb+srv://pavitrak270504:mnbvc0987@cluster0.0nc8j.mongodb.net/')  # Replace with your MongoDB connection string
 db = client['sos']  # Replace with your database name
 collection = db['products']  # Replace with your collection name
+users_collection = db['users']  # Collection for users
+
+
+
+
+
+
 
 results = collection.find()  # This retrieves all documents in the collection
 # Initialize the cart
@@ -26,77 +33,73 @@ def add_to_cart(item, quantity):
 st.sidebar.header("Select Items")
 
 # List of categories
-items = ["Kitchen", "Clothes", "Cosmetics", "Groceries", "Snacks", "Beverages", "Stationaries", "Households"]
+items = ["Kitchen", "Clothes", "Cosmetics", "Groceries", "Snacks", "Beverages", "Stationeries", "Household items"]
 
 # Create a dropdown for item selection
 selected_item = st.sidebar.selectbox("Choose a category", items)
 
 st.sidebar.title("Product List")
-i=0
+
+user_id = "user.dbms@gmail.com"  # Replace with the actual user ID
+user = users_collection.find_one({"_id": user_id})
+
 # Display products from MongoDB
 for product in results:
     if (product['category'].lower()==selected_item.lower()):
         st.sidebar.write(f"**{product['name']}** - ₹{product['price']}")
         # Quantity input
         quantity = st.sidebar.number_input(f"Quantity:  ", min_value=0, max_value=100, value=0, key=product['_id'])
+        #if quantity>0:
+         #   add_to_cart(product['name'], quantity)
+    if user:
+        # Check if the product already exists in the cart
+        cart_data = user.get("cartData", {})
+        if product['_id'] in cart_data:
+            # Update the quantity
+            cart_data[product['_id']] += quantity
+        else:
+            # Add the product to the cart
+            cart_data[product['_id']] = quantity
+
+        # Update the user's cart in the database
+        users_collection.update_one({"_id": user_id}, {"$set": {"cartData": cart_data}})
 
 
 # Based on the category selected, show the respective item options
 if selected_item == "Groceries":
     grocery_items = ["Beans", "Tomato", "Avocado", "Apple", "Onion"]
     selected_groceries = st.sidebar.multiselect("Select Groceries", grocery_items)
-    for grocery in selected_groceries:
-        if st.sidebar.button(f"Add {grocery} to Cart"):
-            add_to_cart(grocery, quantity)
-            st.sidebar.success(f"{quantity} x {grocery} added to cart!")
+    
 
 elif selected_item == "KitchenWare":
     kitchen_items = ["Baking Utensils", "Blender", "Bowl", "Chopping Board Set", "Clay Pots"]
     selected_kitchenware = st.sidebar.multiselect("Select Kitchenware", kitchen_items)
-    for item in selected_kitchenware:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+   
 
 elif selected_item == "Clothes":
     clothes_items = ["Abaya", "Caps", "Churidar", "Coats", "Dhoti"]
     selected_clothes = st.sidebar.multiselect("Select Clothes", clothes_items)
-    for item in selected_clothes:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+    
 
 elif selected_item == "Cosmetics":
     cosmetics_items = ["Blush", "Colour Corrector", "Concealer", "Eyelash Extension", "Eye Shadow", "Eyebrow Pencil"]
     selected_cosmetics = st.sidebar.multiselect("Select Cosmetics", cosmetics_items)
-    for item in selected_cosmetics:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+    
 
 elif selected_item == "Snacks":
     snacks_items = ["Banana Chips", "Biscuits", "Bread Jam", "Candies", "Chips"]
     selected_snacks = st.sidebar.multiselect("Select Snacks", snacks_items)
-    for item in selected_snacks:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+    
 
 elif selected_item == "Beverages":
     beverages_items = ["Coca Cola", "Coffee", "Fanta", "Frooty"]
     selected_beverages = st.sidebar.multiselect("Select Beverages", beverages_items)
-    for item in selected_beverages:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+    
 
 elif selected_item == "Stationaries":
     stationaries_items = ["Pens", "Pencils", "Notebooks", "Markers", "Erasers"]
     selected_stationaries = st.sidebar.multiselect("Select Stationaries", stationaries_items)
-    for item in selected_stationaries:
-        if st.sidebar.button(f"Add {item} to Cart"):
-            add_to_cart(item, quantity)
-            st.sidebar.success(f"{quantity} x {item} added to cart!")
+    
 
 elif selected_item == "Households":
     households_items = ["AC", "Broom", "Bulb", "Ceiling Duster", "Ceiling Fan"]
