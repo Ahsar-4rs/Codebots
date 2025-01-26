@@ -53,10 +53,10 @@ for product in results:
     if user:
         # Check if the product already exists in the cart
         cart_data = user.get("cartData", {})
-        product_id_str = str(product['id'])  # Convert ObjectId to string
+        product_id_str = product['id']  # Convert ObjectId to string
         if product_id_str in cart_data:
             # Update the quantity
-            cart_data[product_id_str] += int(quantity)
+            cart_data[product_id_str] += quantity
         else:
             # Add the product to the cart
             cart_data[product_id_str] = quantity
