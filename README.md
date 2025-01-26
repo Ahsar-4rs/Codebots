@@ -122,10 +122,9 @@ https://ibb.co/QCScj6V
 *Customer will access the website and go to either chatbot to know about items or manually browse through the inventory where the items will be added to the cart. In the cart, a QR Code will be made to access the items after hardware sensoring and processing*
 
 # Build Photos
-![Team]( https://drive.google.com/file/d/1khxWf5Y_UMg_Fcj8ZP4SCONEbsy5SUrt/view?usp=drive_link)
+( https://drive.google.com/file/d/1khxWf5Y_UMg_Fcj8ZP4SCONEbsy5SUrt/view?usp=drive_link)
 
-
-![Components]( https://drive.google.com/file/d/1mk1RquxG3y15vELfg2b_otQBWx2yZAGJ/view?usp=drive_link)
+( https://drive.google.com/file/d/1mk1RquxG3y15vELfg2b_otQBWx2yZAGJ/view?usp=drive_link)
 *bot
 cartItems
 Product
@@ -139,7 +138,7 @@ Gallery
 LoginRegister*
 
 
-![Final](Add photo of final product here)
+
 https://drive.google.com/file/d/1CJxSu4W6EOvnwJ3z_7Tl5f8tsCqIvDAQ/view?usp=drive_link
 ### Project Demo
 # Video
